@@ -1,0 +1,103 @@
+/* .menu-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .menu-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .menu-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .hover-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    width: 200px;
+  }
+  
+  .hover-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .hover-menu li {
+    padding: 10px;
+  }
+  
+  .hover-menu li a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .hover-menu li a:hover {
+    color: #007bff;
+  }
+   */
+
+  #hoverMenu{
+    /* width: '100px'; */
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    text-align: center;
+    background-color: #333;
+    color: white;
+    overflow: hidden;
+    transition: width 0.3s ease;
+    z-index:10;
+  }
+
+  #hoverMenu a {
+    margin-bottom: 20px ;
+    display:block;
+    color:rgba(15, 115, 230, 1);
+    font-weight: bold;
+  } 
+
+  .LogoutButton{
+      background-color: transparent;
+      color: rgba(15, 115, 230, 1);
+      font-weight: bold;
+  }
+  
+
+
+  @media (max-width: 576px) {
+    #hoverMenu {
+        position: fixed; /* 最上部に固定 */
+        top: 0;          /* 画面の一番上に */
+        left: 0;         /* 左に固定 */
+        width: 100%;     /* 幅を100%に */
+        height: 6%;    /* 高さは自動調整 */
+        background-color: #333;
+    }
+
+    /* メニュー内のリンクを横並びに */
+    #hoverMenu a {
+        display: inline-block;
+        width: auto;
+        margin-right: 15px;
+        font-size: 1.5rem;
+        margin-bottom: 0px ;
+    }
+
+    .LogoutButton{
+      margin-right: 15px;
+      font-size: 1.5rem;
+      margin-bottom: 0px ;
+    }
+
+  }

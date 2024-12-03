@@ -1,0 +1,172 @@
+
+.body {
+    margin: 0;
+    overflow: hidden;
+    background: whitesmoke;
+    font-size: 16px;
+}
+.flashcard-container {
+    position: fixed; /* ビューポート全体を基準に固定 */
+    top: 0;          /* ビューポートの上端に位置 */
+    left: 0;         /* ビューポートの左端に位置 */
+    width: 100vw;    /* ビューポートの幅を100%に設定 */
+    height: 100vh;   /* ビューポートの高さを100%に設定 */
+    overflow: hidden; /* スクロールバーを非表示にする（必要に応じて） */
+    background-color: whitesmoke; /* 背景色を設定（任意） */
+}
+
+.flashcard {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    font-size: 36px; 
+    text-align: center;
+
+    background: #e0e0e0;
+}
+.flashcard.hidden {
+    /* display: none; */
+    transform: translateX(100%);
+    transition: opacity 0.4s ease; 
+    opacity: 0;
+}
+
+.flashcard.active {
+  /* transform: translateX(0%); */
+  opacity: 1;
+} 
+
+.flashcard.enter-from-right {
+
+    transform: translateX(0%);
+    transition: transform 0.4s ease;
+    opacity: 1;
+  } 
+
+  .flashcard.enter-from-left {
+    /* transform: translateX(-100%); */
+    /* opacity: 1; */
+    transform: rotateY(360deg);
+    opacity:0.0;
+    transition: transform 0.1s ease, opacity 0.1 ease;
+  } 
+
+
+.upperpart {
+    align-content: center;
+    background: #f0f0f0;
+    font-size: 8rem;
+    display: flex;
+    width: 100%;
+    height: 30% ;
+    position: relative ;
+    white-space: normal;
+}
+
+.underpart {
+    display:flex;
+    background: whitesmoke;
+    padding:0 px;
+    font-size: 3rem;
+    width: 100% ;
+    height: 65% ;
+    justify-content: center; /* 水平方向の中央揃え */
+    align-items: center; /* 垂直方向の中央揃え */
+    /* align-content: center; */
+    position: relative ;
+    white-space: normal;
+}
+
+.no-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    font-size: 24px; 
+    font-weight: bold; 
+    text-align: center;
+}
+
+.graystatus {
+    opacity:0;
+}
+
+.noneDisplay{
+    display:none;
+}
+
+
+.left, .right{
+    opacity: 0;
+    height: 100%;
+}
+
+/* .meanImage {
+    display: block;
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    margin: auto; 
+    box-sizing: border-box; 
+  } */
+
+/* .left{
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    top: 0;
+    width: 40%;
+    height: 100%;
+}
+
+.right{
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    top: 0;
+    width: 60%;
+    height: 100%;
+} */
+
+
+@media (max-width: 576px){
+ /* #hoverMenu {
+    position: fixed;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 6%;
+    background-color: #333;
+} */
+/* #hoverMenu a {
+    display: inline-block;
+    width: auto;
+    margin-right: 15px;
+    font-size: 1.5rem;
+    margin-bottom: 0px ;
+} */
+
+a.mobile-hide {
+    display: none;
+}
+
+.upperpart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    padding: 1rem;
+}
+
+.underpart {
+    font-size: 1.5rem; 
+}
+
+}  
